@@ -1,2 +1,2 @@
 # telegram_bot
-Simple telegram bot
+Jast a simple telegram bot
