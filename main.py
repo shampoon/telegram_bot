@@ -44,7 +44,9 @@ def get_text_messages(message):
                 city = citys_dict.get(w)
         if city:
             res = requests.get("http://api.openweathermap.org/data/2.5/find",
-                               params={'q': city, 'type': 'like', 'units': 'metric', 'APPID': weather_appid})
+                               params={'q': city, 'type': 'like', 'units': 'metric', 'lang': 'ru',
+                                       'APPID': weather_appid})
+
             w_js = json.loads(res.content)['list'][0]
             city = w_js['name']
             temp = w_js['main']['temp']
